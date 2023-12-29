@@ -5,7 +5,7 @@ import com.criteo.hadoop.garmadon.event.proto.JVMStatisticsEventsProtos;
 import java.util.HashMap;
 import java.util.Map;
 
-class EventHelper {
+public class EventHelper {
 
     protected EventHelper() {
         throw new UnsupportedOperationException();
@@ -17,7 +17,7 @@ class EventHelper {
         return json;
     }
 
-    static void processJVMStatisticsData(String type, JVMStatisticsEventsProtos.JVMStatisticsData event, Map<String, Map<String, Object>> eventMaps) {
+    static public void processJVMStatisticsData(String type, JVMStatisticsEventsProtos.JVMStatisticsData event, Map<String, Map<String, Object>> eventMaps) {
         for (JVMStatisticsEventsProtos.JVMStatisticsData.Section section : event.getSectionList()) {
             if (section.getName().equals("disk") || section.getName().equals("network")) {
                 for (JVMStatisticsEventsProtos.JVMStatisticsData.Property property : section.getPropertyList()) {

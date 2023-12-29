@@ -93,6 +93,7 @@
         <bytebuddy.version>1.9.15</bytebuddy.version>
         <spark.version>2.4.3</spark.version>
         <es.version>6.8.1</es.version>
+        <opensearch.version>2.3.0</opensearch.version>
         <logback.version>1.2.3</logback.version>
         <prometheus.version>0.6.0</prometheus.version>
         <maria-java-client.version>2.2.6</maria-java-client.version>
